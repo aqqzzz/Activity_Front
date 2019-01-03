@@ -1,7 +1,7 @@
 // src/components/Hello.tsx
 
 import * as React from 'react';
-import styles from './Hello.scss'
+import * as styles from './Hello.scss';
 import { Button } from 'antd'
 
 export interface Props {
@@ -22,8 +22,8 @@ function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
         Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>
       <div>
-        <Button onClick={onDecrement}>-</Button>
-        <Button onClick={onIncrement}>+</Button>
+        <Button type="primary" htmlType="button" onClick={onDecrement}>-</Button>
+        <button onClick={onIncrement}>+</button>
       </div>
     </div>
   );
