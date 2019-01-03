@@ -4,23 +4,28 @@
   "private": true,
   "dependencies": {
     "@types/react-redux": "^6.0.11",
+    "antd": "^3.11.6",
+    "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
     "react-scripts-ts": "3.1.0",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
+    "start": "react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
     "@types/jest": "^23.3.11",
     "@types/node": "^10.12.18",
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
     "typescript": "^3.2.2"
+  },
+  "resolutions": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11"
   }
 }
