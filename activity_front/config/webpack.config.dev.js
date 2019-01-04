@@ -203,17 +203,20 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            include: [path.join(__dirname, '../../', 'src')],
+            include: [path.join(__dirname, '../', 'src')],
             use: [
               'style-loader',
               {
                 loader: 'typings-for-css-modules-loader',
                 options: {
                   modules: true,
+                  localIdentName: '[name]-[local]-[hash:base64]',
                   namedExport: true,
                   camelCase: true,
                   sass: true
                 }
+              },{
+                loader: 'postcss-loader',
               },
               {
                 loader: 'sass-loader',
