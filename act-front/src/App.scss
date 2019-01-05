@@ -1,12 +1,12 @@
-@import './test.scss';
-:local(.App) {
+:local(.app) {
   text-align: center;
-  .App-logo {
+  
+  :local(.logo) {
     animation: App-logo-spin infinite 20s linear;
     height: 40vmin;
   }
 
-  .App-header {
+  :local(.header) {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -16,14 +16,11 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
-  
-  .App-link {
+
+  :local(.link) {
     color: #61dafb;
   }
-  
 }
-
-
 
 
 @keyframes App-logo-spin {

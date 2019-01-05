@@ -1,7 +1,35 @@
+// import React, { Component } from 'react';
+// import logo from './logo.svg';
+// import styles from './App.scss';
+
+// console.log(styles)
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className={styles.app}>
+//         <header className={styles.header}>
+//           <img src={logo} className={styles.logo} alt="logo" />
+//           <p>
+//             Edit <code>src/App.js</code> and save to reload.
+//           </p>
+//           <a
+//             className={styles.link}
+//             href="https://reactjs.org"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//           >
+//             Learn React
+//           </a>
+//         </header>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import styles from './App.scss'
-import { Button } from 'antd'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function BasicExample() {
   return (
@@ -57,7 +85,6 @@ function Topics({ match }) {
           <Link to={`${match.url}/components`}>Components</Link>
         </li>
         <li>
-          <Button type="primary">确定</Button>
           <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
         </li>
       </ul>
@@ -81,5 +108,3 @@ function Topic({ match }) {
 }
 
 export default BasicExample;
-
-// export default App;
