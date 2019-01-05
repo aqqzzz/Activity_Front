@@ -17,7 +17,7 @@ const store = createStore<StoreState, EnthusiasmAction, any, any>(enthusiasm, {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Hello />
   </Provider>,
   document.getElementById('root') as HTMLElement
 );

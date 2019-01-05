@@ -6,7 +6,9 @@
     "object-literal-sort-keys": false,
     "no-empty-interface": false,
     "jsx-no-lambda": false,
-    "jsx-self-close": false
+    "jsx-self-close": false,
+    "no-console": false,
+    "css-rcurlyexpected": false
   },
   "linterOptions": {
     "exclude": [

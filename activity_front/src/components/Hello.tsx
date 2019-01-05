@@ -4,6 +4,7 @@ import * as React from 'react';
 import styles from './Hello.scss'
 import { Button } from 'antd'
 
+console.log(styles)
 export interface Props {
   name: string;
   enthusiasmLevel?: number;
