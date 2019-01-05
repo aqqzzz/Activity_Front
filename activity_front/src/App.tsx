@@ -1,34 +1,30 @@
-import * as React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import * as Loadable from 'react-loadable'
-import Header from './containers/auth/Header'
-
-
+import React, { Component } from 'react';
 import logo from './logo.svg';
+import styles from './App.scss';
+import { Button } from 'antd'
 
-const Homepage = Loadable({
-  loader: () => import('./containers/Hello'),
-  loading: () => <div>loading...</div>
-})
-class App extends React.Component {
-  public render() {
+console.log(styles)
+
+class App extends Component {
+  render() {
     return (
-      <Router>
-        <div>
-          <Header />
-          <Route path="/" component={Homepage} />
-        </div>
-      </Router>
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h1 className="App-title">Welcome to React</h1>
-      //   </header>
-      //   <p className="App-intro">
-      //     To get started, edit <code>src/App.tsx</code> and save to reload.
-      //   </p>
-      // </div>
-      
+      <div className={styles.app}>
+        <header className={styles.header}>
+          <img src={logo} className={styles.logo} alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <Button type="primary">确定</Button>
+          <a
+            className={styles.link}
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
     );
   }
 }
