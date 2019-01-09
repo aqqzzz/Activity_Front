@@ -1,16 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import logo from './logo.svg'
 import { Button } from 'antd'
-import { BrowserRouter as Router } from 'react-router-dom'
-import styles from './App.module.scss';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Loadable from 'react-loadable'
+import styles from './App.module.scss'
 
-console.log(styles)
+
+const LoginContainer = Loadable({
+  loader: () => import('./containers/LoginContainer'),
+  loading: () => <div>loading...</div>
+})
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className={styles.app}>
+        <Route path="/login" component={LoginContainer} />
+        {/* <div className={styles.app}>
           <header className={styles.header}>
             <img src={logo} className={styles.logo} alt="logo" />
             <p>
@@ -27,7 +33,7 @@ class App extends Component {
             </a>
           </header>
           <Button type="primary">确定</Button>
-       </div>
+        </div> */}
       </Router>
       
     );
